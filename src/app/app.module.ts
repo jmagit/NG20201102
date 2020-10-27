@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ViewNextCoreModule } from 'src/view-next-core';
+import { ERROR_LEVEL, LoggerService, ViewNextCoreModule } from 'src/view-next-core';
 import { ServicesModule } from './services';
 import { MainModule } from './main';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +16,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule, FormsModule,
     AppRoutingModule, ViewNextCoreModule, ServicesModule, MainModule,
   ],
-  providers: [],
+  providers: [
+    LoggerService,
+    {provide: ERROR_LEVEL, useValue: 2 },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

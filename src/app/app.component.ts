@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoggerService } from 'src/view-next-core';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hola mundo';
-  kk: string = "";
 
-  constructor() {
-    this.kk.toLocaleLowerCase();
+  constructor(private out: LoggerService) {
+    out.error('Esto es un error');
+    out.warn('Esto es un warn');
+    out.info('Esto es un info');
+    out.log('Esto es un log');
   }
-  //kk.hola();
 }
