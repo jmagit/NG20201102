@@ -8,14 +8,17 @@ import { ServicesModule } from './services';
 import { MainModule } from './main';
 import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
+import { CommonServicesModule } from './common-services';
+import { DemosComponent } from './demos/demos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DemosComponent
   ],
   imports: [
     BrowserModule, FormsModule,
-    AppRoutingModule, ViewNextCoreModule, ServicesModule, MainModule,
+    AppRoutingModule, ViewNextCoreModule, MainModule, CommonServicesModule, ServicesModule,
   ],
   providers: [
     LoggerService,
