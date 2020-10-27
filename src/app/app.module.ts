@@ -7,6 +7,7 @@ import { ERROR_LEVEL, LoggerService, ViewNextCoreModule } from 'src/view-next-co
 import { ServicesModule } from './services';
 import { MainModule } from './main';
 import { FormsModule } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [
     LoggerService,
-    {provide: ERROR_LEVEL, useValue: 2 },
+    {provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
   ],
   bootstrap: [AppComponent]
 })
