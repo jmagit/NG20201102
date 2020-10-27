@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hola mundo';
+  kk: string = "";
+
+  constructor() {
+    this.kk.toLocaleLowerCase();
+  }
+  //kk.hola();
 }
