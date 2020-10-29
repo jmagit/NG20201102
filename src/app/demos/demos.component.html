@@ -1,4 +1,4 @@
-<h1>Hola {{Nombre | uppercase}}</h1>
+<h1>Hola {{Nombre | striptags | elipsis:20 | uppercase}}</h1>
 <p>
   <input type="text" [(ngModel)]="Nombre" >
 </p>
@@ -37,4 +37,5 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tempore odio 
   <input type="text" value="Madrid" #txtProvincia >
   <input type="button" value="add" (click)="add(txtProvincia.value)" >
 </p>
-<p>{{listado | json}}</p>
+<vn-sizer (sizeChange)="fontsize=$event;" ></vn-sizer>
+<p [style.font-size.px]="fontsize">{{listado | json}}</p>

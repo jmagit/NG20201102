@@ -4,12 +4,13 @@ import { CommonServicesModule } from '../common-services';
 import { NotificationComponent } from './notification/notification.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { HomeComponent } from './home/home.component';
+import { AjaxWaitComponent } from './ajax-wait';
 
 
 
 @NgModule({
-  declarations: [NotificationComponent, CabeceraComponent, HomeComponent, ],
-  exports: [NotificationComponent, CabeceraComponent, HomeComponent, ],
+  declarations: [NotificationComponent, CabeceraComponent, HomeComponent, AjaxWaitComponent, ],
+  exports: [NotificationComponent, CabeceraComponent, HomeComponent, AjaxWaitComponent, ],
   imports: [
     CommonModule, CommonServicesModule,
   ]

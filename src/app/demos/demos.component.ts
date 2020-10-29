@@ -23,6 +23,8 @@ export class DemosComponent implements OnInit, OnDestroy {
   visible = true;
   estetica = { error: false, importante: true, urgente: true };
 
+  fontsize = 36;
+
   constructor(public vm: NotificationService) { }
 
   public get Nombre(): string { return this.nombre; }
