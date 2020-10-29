@@ -1,6 +1,9 @@
 <app-cabecera></app-cabecera>
 <div class="container-fluid">
+  <p>
+    <button *ngFor="let item of menu; let indice=index;" type="button" (click)="seleccionar(indice)">{{item.texto}}</button>
+  </p>
   <app-notification></app-notification>
-  <app-demos></app-demos>
+  <ng-container *ngComponentOutlet="componenteActual"></ng-container>
 </div>
 <router-outlet></router-outlet>

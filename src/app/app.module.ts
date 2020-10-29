@@ -10,11 +10,13 @@ import { FormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { CommonServicesModule } from './common-services';
 import { DemosComponent } from './demos/demos.component';
+import { FormularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemosComponent
+    DemosComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule, FormsModule,
