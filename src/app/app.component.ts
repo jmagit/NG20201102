@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DemosComponent } from './demos/demos.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { HomeComponent } from './main/home/home.component';
+import { PersonasComponent } from './personas';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +11,10 @@ import { HomeComponent } from './main/home/home.component';
 })
 export class AppComponent {
   menu = [
-    {texto: 'Formulario', componente: FormularioComponent },
+    {texto: 'Persona', componente: PersonasComponent },
     {texto: 'Inicio', componente: HomeComponent },
     {texto: 'Demos', componente: DemosComponent},
+    {texto: 'Formulario', componente: FormularioComponent },
   ];
   componenteActual = this.menu[0].componente;
 

@@ -12,6 +12,7 @@ import { environment } from 'src/environments/environment';
 import { CommonServicesModule } from './common-services';
 import { DemosComponent } from './demos/demos.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { PersonasModule } from './personas';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormularioComponent } from './formulario/formulario.component';
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
     AppRoutingModule, ViewNextCoreModule, MainModule, CommonServicesModule, ServicesModule,
+    PersonasModule,
   ],
   providers: [
     LoggerService,

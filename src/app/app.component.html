@@ -4,6 +4,7 @@
     <button *ngFor="let item of menu; let indice=index;" type="button" (click)="seleccionar(indice)">{{item.texto}}</button>
   </p>
   <app-notification></app-notification>
+  <app-ajax-wait></app-ajax-wait>
   <ng-container *ngComponentOutlet="componenteActual"></ng-container>
 </div>
 <router-outlet></router-outlet>
